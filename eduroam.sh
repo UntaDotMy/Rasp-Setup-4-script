@@ -56,7 +56,7 @@ while true; do
             clear
             echo "starting to save your information"
             print_progress 0 100
-            echo -e 'auto lo\niface lo inet loopback\n\niface eth0 inet manual\n\nallow-hotplug wlan0\niface wlan0 inet manual\nwpa-config /etc/wpa_supplicant/wpa_supplicant.conf\niface default inet dhcp' >> /etc/network/interfaces
+            echo -e 'auto lo\niface lo inet loopback\n\niface eth0 inet manual\n\nallow-hotplug wlan0\niface wlan0 inet manual\nwpa-conf /etc/wpa_supplicant/wpa_supplicant.conf\niface default inet dhcp' >> /etc/network/interfaces
             sleep 1
             print_progress 10 100
             sleep 1
