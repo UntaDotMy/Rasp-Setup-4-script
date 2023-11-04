@@ -60,7 +60,7 @@ while true; do
             sleep 1
             print_progress 10 100
             sleep 1
-            echo -e "country=$country\n\nnetwork={\n\tssid=\"eduroam\"\n\teap=PEAP\n\tkey_mgmt=WPA=EAP\n\tphase2=\"auth=MSCHAPV2\"\n\tidentity=\"$u_id@$uni_do\"\n\tpassword=\"$u_p\"\n}\n" >> /etc/wpa_supplicant/wpa_supplicant.conf
+            echo -e "country=$country\n\nnetwork={\n\tssid=\"eduroam\"\n\teap=PEAP\n\tkey_mgmt=WPA-EAP\n\tphase2=\"auth=MSCHAPV2\"\n\tidentity=\"$u_id@$uni_do\"\n\tpassword=\"$u_p\"\n}\n" >> /etc/wpa_supplicant/wpa_supplicant.conf
             sleep 1
             print_progress 50 100
             sleep 1
