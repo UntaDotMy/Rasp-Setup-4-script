@@ -1,0 +1,31 @@
+1. Open the `systemd` service file you created:
+```bash
+sudo nano /etc/systemd/system/setdate.service
+```
+2. Modify the file to look like this:
+```bash
+[Unit]
+Description=Set System Date
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sleep 30
+ExecStartPre=/bin/bash -c 'until ping -c1 google.com; do sleep 1; done'
+ExecStart=/bin/bash -c date -s "$(wget -qSO- --max-redirect=0 google.com 2>&1 | grep Date: | cut -d' ' -f5-8)Z"
+
+[Install]
+WantedBy=multi-user.target
+```
+3. Save and exit the file.
+4. Enable the service:
+```bash
+sudo systemctl enable setdate
+```
+5. Reload the `systemd` daemon to apply the changes:
+```bash
+sudo systemctl daemon-reload
+```
+6. Start service to test the new configuration:
+```bash
+sudo systemctl start setdate
+```
