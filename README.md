@@ -66,7 +66,11 @@ put this code before exit 0
 ```
 
 
+if you dont make a bot for telegram ( use botfather ) , grab token . goto this website , change <token> to yours.
+``` http://api.telegram.org/bot<token>/getupdates
+```
 
+after that , go to your bot , press start . then refresh website above . you will get chat id . use it in info2tele.sh.
 
 
 
