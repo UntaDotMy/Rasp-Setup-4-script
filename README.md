@@ -2,6 +2,8 @@
 # Setup for Raspberrypi4 - personal use
 ### if u want to use , just use , you free to copy and modified my work , but please star the repo to do so.
 
+
+
 ## Deployment
 
 Assume you already in root env. If not , use below code to get root :
@@ -31,6 +33,11 @@ then run the code
 ```
 make sure to validate your information otherwise the wifi will be not connected .
 
+
+
+
+
+
 #### below code to get you ipv4 information to telegram , for easy access ( SSH )
 
 download the code below
@@ -57,6 +64,11 @@ put this code before exit 0
 ```
 bash /root/info2tele.sh
 ```
+
+
+
+
+
 
 
 #### To update your rpi date **sync , install package bellow
