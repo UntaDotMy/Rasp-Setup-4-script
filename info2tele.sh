@@ -22,6 +22,9 @@ do
     sleep 10
 done
 
+#delay data for making sure the connection is going thru
+sleep 5 
+
 # Get the IPv4 information
 IPV4_INFO=$(ip -4 addr show wlan0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}')
 
