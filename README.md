@@ -62,7 +62,7 @@ nano /etc/rc.local
 put this code before exit 0
 
 ```
-bash /root/info2tele.sh
+/root/info2tele.sh
 ```
 
 
