@@ -49,6 +49,46 @@ Lastly , reboot your raspberrypi , and your raspberry pi will be automatically c
 sudo reboot
 ```
 
+## ℹ️ : To get your ipv4 information from connected eduroam to telegram bot.
+
+First , go to <a href="https://telegram.me/BotFather"> BotFather </a> and make your own bot . give unique name so u can remember . grab the token , we need it later in configuration.
+
+Second , go to this website copy and paste your token in the url, replace <token> according to your bot token.
+```bash
+http://api.telegram.org/bot<token>/getupdates
+```
+Third , start your bot in telegram , and just chat anything to your bot. and refresh the website, you will get the chatid.
+
+Fourth , grab your token and chat id , copy it into notepad.
+
+Fifth , download the file using wget in your teminal (Copy Paste)
+```bash
+wget https://raw.githubusercontent.com/UntaDotMy/Rasp-Setup-4-script/main/info2tele.sh && chmod +x info2tele.sh
+```
+Sixth , open up info2tele.sh using nano (text editor) and put your token and chat id in it.
+```bash
+nano info2tele.sh
+```
+
+Lastly , we need in to run at boot , so it will send the ipv4 information to your telegram bot.
+
+first , open up rc.local .
+```bash
+nano /etc/rc.local
+```
+second , put below code before the exit 0.
+```bash
+/root/info2tele.sh
+```
+save the file with ctrl+x and then y and enter. and reboot .
+```bash
+sudo reboot 
+```
+
+you should get the network ipv4 information send to your telegram when the raspberry pi connected to the eduroam . 
+
+Have fun do your project !
+
 
 ## :wave: Contributing
 
@@ -56,7 +96,6 @@ sudo reboot
 
 Contributions are always welcome!
 
-see `contributing.md` for ways to get started
 
 ## :grey_question: FAQ
 
