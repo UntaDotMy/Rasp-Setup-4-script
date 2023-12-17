@@ -3,7 +3,7 @@
 <h1>Various tools for raspberry Pi setup.</h1>
 <p>Usefull script to connect eduroam network using raspberry pi for IOT , remote control and etc ..</p>
 
-<h4> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/issues"> Request Feature </a> </h4>
+<h4> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md"> How to enable rc.local </a> <span> . </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/issues"> Request Feature </a> </h4>
 
 
 </div>
@@ -102,11 +102,6 @@ Contributions are always welcome!
 - Why it said Wi-Fi is currently blocked by rfkill , after i reboot ?
 ```bash
 - You need to configure your wlan country code before you can use WiFi . Follow second step above .
-```
-
-- How do i enable rc.local ?
- ```bash
-- read this : <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md"> How to enable rc.local </a>
 ```
 
 ## :warning: License
