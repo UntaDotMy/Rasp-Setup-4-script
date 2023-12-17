@@ -100,10 +100,14 @@ Contributions are always welcome!
 ## :grey_question: FAQ
 
 - Why it said Wi-Fi is currently blocked by rfkill , after i reboot ?
+```bash
 - You need to configure your wlan country code before you can use WiFi . Follow second step above .
+```
 
 - How do i enable rc.local ?
+ ```bash
 - read this : <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md"> How to enable rc.local </a>
+```
 
 ## :warning: License
 
