@@ -103,7 +103,7 @@ Contributions are always welcome!
 - You need to configure your wlan country code before you can use WiFi . Follow second step above .
 
 - How do i enable rc.local ?
-- read this : <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md" How to enable rc.local </a>
+- read this : <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md"> How to enable rc.local </a>
 
 ## :warning: License
 
