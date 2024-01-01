@@ -37,7 +37,7 @@ raspi-config
 ```
 To connect to eduroam , if you have internet connection , use this command :
 ```bash
-https://raw.githubusercontent.com/UntaDotMy/Rasp-Setup-4-script/main/eduroam.sh && chmod +x eduroam.sh && ./eduroam.sh
+wget https://raw.githubusercontent.com/UntaDotMy/Rasp-Setup-4-script/main/eduroam.sh && chmod +x eduroam.sh && ./eduroam.sh
 ```
 if you dont have internet connection in your raspberry pi , make a new file , then copy the code inside eduroam.sh and save it in <anything>.sh
 ```bash
