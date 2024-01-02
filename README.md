@@ -57,7 +57,7 @@ Second , go to this website copy and paste your token in the url, replace <token
 ```bash
 http://api.telegram.org/bot<token>/getupdates
 ```
-Third , start your bot in telegram , and just chat anything to your bot. and refresh the website, you will get the chatid.
+Third , start your bot in telegram , and just chat anything to your bot. and refresh the website, you will get the chat id (id from message).
 
 Fourth , grab your token and chat id , copy it into notepad.
 
@@ -106,6 +106,10 @@ Contributions are always welcome!
 - After reboot , i dont get the chat from my telegram bot , do i did wrong ?
 ```bash
 - try enable the rc local service , see above for How to enable rc.local .
+```
+- My clock not syncronize , i have internet , how to syncronize ?
+```bash
+- sudo apt install htpdate
 ```
 
 ## :warning: License
