@@ -105,7 +105,7 @@ Contributions are always welcome!
 ```
 - After reboot , i dont get the chat from my telegram bot , do i did wrong ?
 ```bash
-- try enable the rc local service , more here : <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md"> How to enable rc.local </a>
+- try enable the rc local service , see above for How to enable rc.local .
 ```
 
 ## :warning: License
