@@ -19,19 +19,19 @@ clear
 
 # Print the banner
 cat << "EOF"
-\e[0;33m 
-  ___                                             _                      _   _  
- / (_)   |                                       | |                    | | | | 
- \__   __|          ,_    __   __,   _  _  _     | |  __   ,_      __,  | | | | 
- /    /  |  |   |  /  |  /  \_/  |  / |/ |/ |    |/  /  \_/  |    /  |  |/  |/   
- \___/\_/|_/ \_/|_/   |_/\__/ \_/|_/  |  |  |_/  |__/\__/    |_/  \_/|_/|__/|__/
+[1;33m
+  ___                                             _                      _   _
+ / (_)   |                                       | |                    | | | |
+ \__   __|          ,_    __   __,   _  _  _     | |  __   ,_      __,  | | | |
+ /    /  |  |   |  /  |  /  \_/  |  / |/ |/ |    |/  /  \_/  |    /  |  |/  |/
+ \___/\_/|_/ \_/|_/   |_/\__/ \_/|_/  |  |  |_/  |__/\__/    |_/  \_/|_/|__/
                                                   |\                             
-                                                  |/                             
+                                                  |/
 EOF
 
 echo "This code is provided by Unta"
-echo "! please take note, we don't capture anything you provided here, this code is meant to enable auto connection to your eduroam wifi access (if available)"
-echo "Please make sure you put your user/password according to your University otherwise it will not be connected"
+echo "Note: We don't capture any of your provided information. This script is meant to enable auto connection to your eduroam WiFi access (if available)."
+echo "Please make sure you put your user/password according to your University; otherwise, it will not be connected."
 
 sleep 2
 
@@ -42,36 +42,32 @@ read -rp "Your Id (e.g., IA87392): " -e u_id
 read -sp "Password: " -e u_p
 
 # Confirm user input
-echo "Please make sure the detail is correct"
-echo "Country : $country"
-echo "Identity : $u_id@$uni_do"
-echo "Password : $u_p"
+echo -e "\n\nPlease verify the details:"
+echo "Country: $country"
+echo "Identity: $u_id@$uni_do"
+echo "Password: ********"
 
 while true; do
-    read -p "Detail is correct? [Y/n]: " yn
+    read -p "Are the details correct? [Y/n]: " yn
     case $yn in
         [Yy]* )
-            echo "ready.."
-            sleep 1
+            echo "Preparing to save your information..."
+            sleep 2
             clear
-            echo "starting to save your information"
+            echo "Saving your information..."
             print_progress 0 100
             echo -e 'auto lo\niface lo inet loopback\n\niface eth0 inet manual\n\nallow-hotplug wlan0\niface wlan0 inet manual\nwpa-conf /etc/wpa_supplicant/wpa_supplicant.conf\niface default inet dhcp' >> /etc/network/interfaces
-            sleep 1
-            print_progress 10 100
-            sleep 1
-            echo -e "country=$country\n\nnetwork={\n\tssid=\"eduroam\"\n\teap=PEAP\n\tkey_mgmt=WPA-EAP\n\tphase2=\"auth=MSCHAPV2\"\n\tidentity=\"$u_id@$uni_do\"\n\tpassword=\"$u_p\"\n}\n" >> /etc/wpa_supplicant/wpa_supplicant.conf
-            sleep 1
+            sleep 2
             print_progress 50 100
-            sleep 1
+            echo -e "country=$country\n\nnetwork={\n\tssid=\"eduroam\"\n\teap=PEAP\n\tkey_mgmt=WPA-EAP\n\tphase2=\"auth=MSCHAPV2\"\n\tidentity=\"$u_id@$uni_do\"\n\tpassword=\"$u_p\"\n}\n" >> /etc/wpa_supplicant/wpa_supplicant.conf
+            sleep 2
             print_progress 100 100
-            sleep 1
-            clear
-            echo "done, please reboot your Raspberry Pi with sudo reboot"
+            echo -e "\n\nConfiguration completed successfully!"
+            echo "Please reboot your Raspberry Pi using 'sudo reboot'."
             sleep 2
             exit;;
         [Nn]* ) 
-            echo "Please run this script again to configure"; 
+            echo "Please run this script again to configure."
             exit;;
         * ) echo "Please answer yes or no.";;
     esac
