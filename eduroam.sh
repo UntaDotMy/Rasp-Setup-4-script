@@ -56,9 +56,11 @@ while true; do
             clear
             echo "Saving your information..."
             print_progress 0 100
+            cp /etc/network/interfaces /etc/network/backup_files/interfaces
             echo -e 'auto lo\niface lo inet loopback\n\niface eth0 inet manual\n\nallow-hotplug wlan0\niface wlan0 inet manual\nwpa-conf /etc/wpa_supplicant/wpa_supplicant.conf\niface default inet dhcp' >> /etc/network/interfaces
             sleep 2
             print_progress 50 100
+            cp /etc/wpa_supplicant/wpa_supplicant.conf /etc/wpa_supplicant/backup_file/wpa_supplicant.conf
             echo -e "country=$country\n\nnetwork={\n\tssid=\"eduroam\"\n\teap=PEAP\n\tkey_mgmt=WPA-EAP\n\tphase2=\"auth=MSCHAPV2\"\n\tidentity=\"$u_id@$uni_do\"\n\tpassword=\"$u_p\"\n}\n" >> /etc/wpa_supplicant/wpa_supplicant.conf
             sleep 2
             print_progress 100 100
