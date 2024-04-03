@@ -2,6 +2,8 @@
 
 <h1>Various tools for raspberry Pi setup.</h1>
 <p>Usefull script to connect eduroam network using raspberry pi for IOT , remote control and etc ..</p>
+<p>Tested and verified using raspberrypi os Buster and below , please dont use > buster .</p>
+<p>Upcoming update , restore file to original in case something going wrong.</p>
 
 <h4> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/master/README.md"> Documentation </a> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/blob/main/rc-local-setup.md"> How to enable rc.local </a> <span> . </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/issues"> Report Bug </a> <span> · </span> <a href="https://github.com/UntaDotMy/Rasp-Setup-4-script/issues"> Request Feature </a> </h4>
 
